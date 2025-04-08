@@ -2,13 +2,13 @@ import InsightRoll from "@/src/components/About/InsightRoll";
 
 
 const insights = [
-    "20+ Projects Completed",
-    "3+ Years of Freelancing",
-    "99% Client Satisfaction",
-    "20K+ Subscribers",
-    "Authored In-Depth Course on Educative",
-    "Contributed as a Technical Course Reviewer 📝",
-    "Recipient of the Hackernoon Noonies Award 🏆",
+    "Nuance Lives Here",
+    "Law Is For The People",
+    "Read Before You React",
+    "Know The Truth",
+    "Facts First",
+    "Law Is Language",
+    "To Do What Is Right, Not What Is Easy",
   ];
 
 export default function AboutLayout({ children }) {
