@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://create-blog-with-nextjs.vercel.app
+
+# Sitemaps
+Sitemap: https://create-blog-with-nextjs.vercel.app/sitemap.xml
