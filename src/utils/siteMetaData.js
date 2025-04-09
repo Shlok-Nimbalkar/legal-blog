@@ -1,6 +1,6 @@
 // please update required information
 const siteMetadata = {
-    title: 'Think Law | Nimbalkar.in',
+    title: 'Nimbalkar Law | Something Different',
     author: 'Shlok Nimbalkar',
     headerTitle: 'Nimbalkar',
     description: 'A blog for nuance, integrity and clarity',

@@ -8,7 +8,7 @@ const AboutCoverSection = () => {
         <div className='w-full md:w-1/2 h-full border-r-2 border-solid border-dark dark:border-light flex justify-center'> 
             <Image 
               src={profileCharacter} 
-              alt="CodeBucks" 
+              alt="Nimbalkar Law" 
               className='w-full max-w-3xl xs:w-3/4 md:w-2/3 h-auto object-contain object-center'
               priority
               sizes="(max-width: 768px) 100vw,(max-width: 1180px) 50vw, 50vw"

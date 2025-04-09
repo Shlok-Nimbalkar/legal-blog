@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   experimental: {
-    serverActions: true, // required if you're using App Router features
+    serverActions: {}, // required if you're using App Router features
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
