@@ -15,25 +15,30 @@ module.exports = {
         accentDark: "#C6A664",
         gray: "#747474",
       },
-      fontFamily:{
+      fontFamily: {
         mr: ["var(--font-mr)"],
-        in: ["var(--font-in)"]
+        in: ["var(--font-in)"],
       },
-      animation:{
-        roll: "roll 24s linear infinite"
+      animation: {
+        roll: "roll 24s linear infinite",
+        'bounce-slow': "bounce-slow 3s ease-in-out infinite",
       },
-      keyframes:{
-        roll:{
-          "0%": {transform: "translateX(100%)"},
-          "100%": {transform: "translateX(-100%)"}
-        }
+      keyframes: {
+        roll: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        'bounce-slow': {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
-      screens:{
+      screens: {
         sxl: "1180px",
         // @media (min-width: 1180px){...}
-        xs: "480px"
+        xs: "480px",
         // @media (min-width: 480px){...}
-      }
+      },
     },
   },
   plugins: [
