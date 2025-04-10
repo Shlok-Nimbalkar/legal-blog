@@ -13,9 +13,6 @@ const Footer = () => {
       <p className="mt-5 px-4 text-center w-full sm:w-3/5 font-light dark:font-medium text-sm sm:text-base">
         Subscribe for meaningful breakdowns, useful articles, important updates — straight to your inbox!
       </p>
-      <p className="mt-2">
-        If you do not get a confirmation email, check your spam folder, or contact us.
-      </p>
 
       <form
         action="https://buttondown.email/api/emails/embed-subscribe/nimbalkar"
