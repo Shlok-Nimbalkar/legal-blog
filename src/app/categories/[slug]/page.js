@@ -1,7 +1,9 @@
 import { blogs as allBlogs } from "@/.velite/generated";
 import BlogLayoutThree from "@/src/components/Blog/BlogLayoutThree";
 import Categories from "@/src/components/Blog/Categories";
-import { slug } from "github-slugger";
+import Slugger from "github-slugger"; // Import the class
+
+const slugger = new Slugger(); // Instantiate the Slugger class
 
 export async function generateStaticParams() {
   const categories = [];
@@ -10,7 +12,7 @@ export async function generateStaticParams() {
   allBlogs.map((blog) => {
     if (blog.isPublished) {
       blog.tags.map((tag) => {
-        let slugified = slug(tag);
+        let slugified = slugger.slug(tag); // Use the instance to generate the slug
         if (!categories.includes(slugified)) {
           categories.push(slugified);
           paths.push({ slug: slugified });
@@ -23,7 +25,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const slugified = params?.slug || 'all';  // Safe access
+  const { slug } = await params;  // Await params before accessing slug
+  const slugified = slug || 'all';  // Safe access
   return {
     title: `${slugified.replaceAll("-", " ")} Blogs`,
     description: `Learn more about ${slugified === "all" ? "web development" : slugified} through our collection of expert blogs and tutorials`,
@@ -31,12 +34,13 @@ export async function generateMetadata({ params }) {
 }
 
 const CategoryPage = async ({ params }) => {
-  const slugified = params?.slug || 'all';  // Safe access
+  const { slug } = await params;  // Await params before accessing slug
+  const slugified = slug || 'all';  // Safe access
 
   const allCategories = ["all"];
   allBlogs.forEach(blog => {
     blog.tags.forEach(tag => {
-      const slugifiedTag = slug(tag);
+      const slugifiedTag = slugger.slug(tag);  // Use the instance to generate the slug
       if (!allCategories.includes(slugifiedTag)) {
         allCategories.push(slugifiedTag);
       }
@@ -47,7 +51,7 @@ const CategoryPage = async ({ params }) => {
 
   const blogs = allBlogs.filter(blog => {
     if (slugified === "all") return true;
-    return blog.tags.some(tag => slug(tag) === slugified);
+    return blog.tags.some(tag => slugger.slug(tag) === slugified);  // Use the instance to generate the slug
   });
 
   return (
