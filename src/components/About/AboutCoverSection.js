@@ -20,7 +20,10 @@ const AboutCoverSection = () => {
                 To Empower, To Decode, To Defend.
             </h2>
             <p className='font-medium capitalize mt-4 text-base'>
-                This Mantra defines our purpose. This blog was created to educate, inform and empower others. In this blog, we dive into a variety of topics in the field of law; from social and political matters, to the corporate world and beyond. We discuss with evidence. Not with bias, but with nuance. Complex problems deserve complex discussions.
+                This Mantra defines our purpose. This blog was created to educate, inform and empower others. In this blog, we dive into a variety of topics in the field of law; from social and political matters, to the corporate world and beyond. We discuss with evidence. Not with bias, but with nuance. Complex problems deserve complex discussions. <em>Email: <span className="normal-case">contact@nimbalkar.in</span></em>
+            </p>
+
+        </div>
   )
 }
 
