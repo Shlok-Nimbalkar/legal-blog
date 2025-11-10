@@ -10,7 +10,7 @@ const siteMetadata = {
     siteLogo: '/logo.png',
     socialBanner: '/social-banner.png', // add social banner in the public folder
     email: 'contact@nimbalkar.in', 
-    linkedin: 'https://www.linkedin.com/in/shlok-nimbalkar-63a1932b2/',
+    linkedin: 'https://www.linkedin.com/in/shlokb2/',
     locale: 'en-US',
   }
   
